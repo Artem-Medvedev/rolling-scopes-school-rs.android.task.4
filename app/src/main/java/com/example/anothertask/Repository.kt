@@ -18,9 +18,9 @@ class Repository(private val dao: Dao)  {
     }
 
 
-    val sortByTitle: LiveData<List<Notes>> = dao.sortByTitle()
+    val sortByName: LiveData<List<Notes>> = dao.sortByName()
 
-    val sortByDesc: LiveData<List<Notes>> = dao.sortByDesc()
+    val sortBySurname: LiveData<List<Notes>> = dao.sortBySurname()
 
     val sortByAge: LiveData<List<Notes>> = dao.sortByAge()
 

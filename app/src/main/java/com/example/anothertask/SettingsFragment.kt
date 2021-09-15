@@ -16,21 +16,21 @@ class SettingsFragment: PreferenceFragmentCompat() {
 
     override fun onResume() {
         super.onResume()
-        val switchTitle = findPreference<SwitchPreference>("title")
-        val switchDesc = findPreference<SwitchPreference>("desc")
+        val switchName = findPreference<SwitchPreference>("name")
+        val switchSurname = findPreference<SwitchPreference>("surname")
         val switchAge = findPreference<SwitchPreference>("age")
 
-        switchTitle?.setOnPreferenceClickListener {
-            if(switchTitle.isChecked){
-                switchDesc?.isChecked = false
+        switchName?.setOnPreferenceClickListener {
+            if(switchName.isChecked){
+                switchSurname?.isChecked = false
                 switchAge?.isChecked = false
             }
             true
         }
 
-        switchDesc?.setOnPreferenceClickListener {
-            if(switchDesc.isChecked){
-                switchTitle?.isChecked = false
+        switchSurname?.setOnPreferenceClickListener {
+            if(switchSurname.isChecked){
+                switchName?.isChecked = false
                 switchAge?.isChecked = false
             }
             true
@@ -38,8 +38,8 @@ class SettingsFragment: PreferenceFragmentCompat() {
 
         switchAge?.setOnPreferenceClickListener {
             if(switchAge.isChecked){
-                switchDesc?.isChecked = false
-                switchTitle?.isChecked = false
+                switchName?.isChecked = false
+                switchSurname?.isChecked = false
             }
             true
         }

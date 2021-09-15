@@ -65,11 +65,11 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(ViewModel::class.java)
 
 
-        if(prefs.getBoolean("title",false)){
+        if(prefs.getBoolean("name",false)){
             viewModel.sortByTitle.observe(this,{notes -> adapter.setData(notes)})
         }
 
-        if(prefs.getBoolean("desc",false)){
+        if(prefs.getBoolean("surname",false)){
             viewModel.sortByDesc.observe(this,{notes -> adapter.setData(notes)})
         }
 

@@ -16,10 +16,10 @@ interface Dao {
 
 
     @Query("SELECT * FROM notes ORDER BY noteName ASC")
-     fun sortByTitle():LiveData<List<Notes>>
+     fun sortByName():LiveData<List<Notes>>
 
     @Query("SELECT * FROM notes ORDER BY noteSurname ASC")
-    fun sortByDesc():LiveData<List<Notes>>
+    fun sortBySurname():LiveData<List<Notes>>
 
     @Query("SELECT * FROM notes ORDER BY noteAge DESC")
     fun sortByAge():LiveData<List<Notes>>

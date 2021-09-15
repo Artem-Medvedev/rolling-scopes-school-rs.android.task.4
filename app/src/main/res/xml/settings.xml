@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <SwitchPreference
         app:title="Sort by title"
-        app:key="title"
+        app:key="name"
         app:defaultValue="false"/>
 
     <SwitchPreference
         app:title="Sort by desc"
-        app:key="desc"
+        app:key="surname"
         app:defaultValue="false"/>
 
     <SwitchPreference

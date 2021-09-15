@@ -17,8 +17,8 @@ class ViewModel(application: Application): AndroidViewModel(application) {
         readAllNotes = repository.readAllNotes
     }
 
-    val sortByTitle: LiveData<List<Notes>> = repository.sortByTitle
-    val sortByDesc: LiveData<List<Notes>> = repository.sortByDesc
+    val sortByTitle: LiveData<List<Notes>> = repository.sortByName
+    val sortByDesc: LiveData<List<Notes>> = repository.sortBySurname
     val sortByAge: LiveData<List<Notes>> = repository.sortByAge
 
 
