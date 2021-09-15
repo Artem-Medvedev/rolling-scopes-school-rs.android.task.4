@@ -127,7 +127,7 @@ class MainActivity : AppCompatActivity() {
 
         etNoteName.setText(notes.noteName)
         etNoteSurname.setText(notes.noteSurname)
-        etNoteAge.setText(notes.noteAge)
+        etNoteAge.setText(notes.noteAge.toString())
 
         dialog.findViewById<Button>(R.id.cancel_bt).setOnClickListener {
             dialog.dismiss()
