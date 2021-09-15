@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference
+        app:title="Sort by title"
+        app:key="title"
+        app:defaultValue="false"/>
+
+    <SwitchPreference
+        app:title="Sort by desc"
+        app:key="desc"
+        app:defaultValue="false"/>
+
+    <SwitchPreference
+        app:title="Sort by age"
+        app:key="age"
+        app:defaultValue="false"/>
+
+</PreferenceScreen>
