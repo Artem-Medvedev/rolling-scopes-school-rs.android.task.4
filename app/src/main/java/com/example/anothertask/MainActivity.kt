@@ -65,6 +65,12 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(ViewModel::class.java)
 
 
+        addNewNote.setOnClickListener{
+            showDialogWindow()
+        }
+
+        adapter.OnItemClick = {notes -> showActionDialog(notes)  }
+
         if(prefs.getBoolean("name",false)){
             viewModel.sortByTitle.observe(this,{notes -> adapter.setData(notes)})
         }
@@ -77,13 +83,13 @@ class MainActivity : AppCompatActivity() {
             viewModel.sortByAge.observe(this,{notes -> adapter.setData(notes)})
         }
 
-        viewModel.readAllNotes.observe(this,{notes -> adapter.setData(notes)})
 
         addNewNote.setOnClickListener{
             showDialogWindow()
         }
 
         adapter.OnItemClick = {notes -> showActionDialog(notes)  }
+
 
         super.onResume()
     }
